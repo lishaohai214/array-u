@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数组去重 - 8 </title>
+</head>
+
+<body>
+    <h1>数组去重 - 8</h1>
+    <h2>利用数组原型对象上的 splice 方法。</h2>
+    <script>
+        function unique8(arr) {
+            var i,j,len = arr.length;
+            for (i = 0; i < len; i++) {
+                for (j = i + 1; j < len; j++) {
+                    if (arr[i] == arr[j]) {
+                        arr.splice(j, 1);
+                        len--;
+                        j--;
+                    }
+                }
+            }
+            return arr;
+        }
+
+        console.log('------------方法八---------------');
+
+        console.log(unique8([1, 1, 2, 3, 5, 3, 1, 5, 6, 7, 4]));
+    </script>
+</body>
+
+</html>

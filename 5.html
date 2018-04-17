@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数组去重 - 5 </title>
+</head>
+
+<body>
+    <h1>数组去重 5 </h1>
+    <h2>利用数组原型对象上的 includes 方法</h2>
+    <script>
+        function unique5(arr) { 
+            var res = [];   
+            for (var i = 0; i < arr.length; i++) {  
+                if (!res.includes(arr[i])) { // 如果res新数组包含当前循环item
+                       
+                    res.push(arr[i]);  
+                } 
+            } 
+            return res;
+        } 
+        console.log('------------方法五---------------'); 
+        console.log(unique5([1, 1, 2, 3, 5, 3, 1, 5, 6, 7, 4]));
+    </script>
+</body>
+
+</html>
